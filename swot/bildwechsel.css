@@ -20,7 +20,7 @@ video{
 
 .bild1::before{
     content: "";
-    background: url("../img/design/1.jpg");
+    background: url("img/design/1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,7 +41,7 @@ video{
 
 .bild11::before{
     content: "";
-    background: url("../img/html/1.jpg");
+    background: url("img/html/1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,7 +54,7 @@ video{
 
 .bild13::before{
     content: "";
-    background: url("../img/js/1.jpg");
+    background: url("img/js/1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -68,7 +68,7 @@ video{
 
 .bild14::before{
     content: "";
-    background: url("../img/konzept/1.jpg");
+    background: url("img/konzept/1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -81,7 +81,7 @@ video{
 
 .bild15::before{
     content: "";
-    background: url("../img/gui/1.jpg");
+    background: url("img/gui/1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -94,7 +94,7 @@ video{
 
 .bild16::before{
     content: "";
-    background: url("../img/remote/1.jpg");
+    background: url("img/remote/1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -112,7 +112,7 @@ video{
 
 .bild2::before{
     content: "";
-    background: url("../img/design/2.jpg");
+    background: url("img/design/2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -125,7 +125,7 @@ video{
 
 .bild21::before{
     content: "";
-    background: url("../img/html/2.jpg");
+    background: url("img/html/2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -138,7 +138,7 @@ video{
 
 .bild22::before{
     content: "";
-    background: url("../img/ae/2.jpg");
+    background: url("img/ae/2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -151,7 +151,7 @@ video{
 
 .bild23::before{
     content: "";
-    background: url("../img/js/2.jpg");
+    background: url("img/js/2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -164,7 +164,7 @@ video{
 
 .bild24::before{
     content: "";
-    background: url("../img/konzept/2.jpg");
+    background: url("img/konzept/2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -177,7 +177,7 @@ video{
 
 .bild25::before{
     content: "";
-    background: url("../img/gui/2.jpg");
+    background: url("img/gui/2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -190,7 +190,7 @@ video{
 
 .bild26::before{
     content: "";
-    background: url("../img/remote/2.jpg");
+    background: url("img/remote/2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -207,7 +207,7 @@ video{
 
 .bild3::before{
     content: "";
-    background: url("../img/design/3.jpg");
+    background: url("img/design/3.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -220,7 +220,7 @@ video{
 
 .bild31::before{
     content: "";
-    background: url("../img/html/3.jpg");
+    background: url("img/html/3.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -233,7 +233,7 @@ video{
 
 .bild32::before{
     content: "";
-    background: url("../img/ae/3.jpg");
+    background: url("img/ae/3.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -246,7 +246,7 @@ video{
 
 .bild33::before{
     content: "";
-    background: url("../img/js/3.jpg");
+    background: url("img/js/3.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -259,7 +259,7 @@ video{
 
 .bild34::before{
     content: "";
-    background: url("../img/konzept/3.jpg");
+    background: url("img/konzept/3.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -273,7 +273,7 @@ video{
 
 .bild35::before{
     content: "";
-    background: url("../img/gui/3.jpg");
+    background: url("img/gui/3.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -286,7 +286,7 @@ video{
 
 .bild36::before{
     content: "";
-    background: url("../img/remote/3.jpg");
+    background: url("img/remote/3.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -299,7 +299,7 @@ video{
 
 .bild4::before{
     content: "";
-    background: url("../img/design/4.jpg");
+    background: url("img/design/4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -312,7 +312,7 @@ video{
 
 .bild41::before{
     content: "";
-    background: url("../img/html/4.jpg");
+    background: url("img/html/4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -325,7 +325,7 @@ video{
 
 .bild43::before{
     content: "";
-    background: url("../img/js/4.jpg");
+    background: url("img/js/4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -338,7 +338,7 @@ video{
 
 .bild44::before{
     content: "";
-    background: url("../img/konzept/4.jpg");
+    background: url("img/konzept/4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -351,7 +351,7 @@ video{
 
 .bild45::before{
     content: "";
-    background: url("../img/gui/4.jpg");
+    background: url("img/gui/4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -364,7 +364,7 @@ video{
 
 .bild46::before{
     content: "";
-    background: url("../img/remote/4.jpg");
+    background: url("img/remote/4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -377,7 +377,7 @@ video{
 
 .bild5::before{
     content: "";
-    background: url("../img/design/5.jpg");
+    background: url("img/design/5.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -392,7 +392,7 @@ video{
 
 .bild51::before{
     content: "";
-    background: url("../img/html/5.jpg");
+    background: url("img/html/5.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -405,7 +405,7 @@ video{
 
 .bild53::before{
     content: "";
-    background: url("../img/js/5.jpg");
+    background: url("img/js/5.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -418,7 +418,7 @@ video{
 
 .bild54::before{
     content: "";
-    background: url("../img/konzept/5.jpg");
+    background: url("img/konzept/5.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -431,7 +431,7 @@ video{
 
 .bild55::before{
     content: "";
-    background: url("../img/gui/5.jpg");
+    background: url("img/gui/5.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -444,7 +444,7 @@ video{
 
 .bild56::before{
     content: "";
-    background: url("../img/remote/5.jpg");
+    background: url("img/remote/5.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -458,7 +458,7 @@ video{
 
 .bild6::before{
     content: "";
-    background: url("../img/design/6.jpg");
+    background: url("img/design/6.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -471,7 +471,7 @@ video{
 
 .bild61::before{
     content: "";
-    background: url("../img/html/6.jpg");
+    background: url("img/html/6.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -484,7 +484,7 @@ video{
 
 .bild63::before{
     content: "";
-    background: url("../img/js/6.jpg");
+    background: url("img/js/6.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -497,7 +497,7 @@ video{
 
 .bild64::before{
     content: "";
-    background: url("../img/konzept/6.jpg");
+    background: url("img/konzept/6.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -510,7 +510,7 @@ video{
 
 .bild65::before{
     content: "";
-    background: url("../img/gui/6.jpg");
+    background: url("img/gui/6.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -524,7 +524,7 @@ video{
 
 .bild66::before{
     content: "";
-    background: url("../img/remote/6.jpg");
+    background: url("img/remote/6.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -549,7 +549,7 @@ video{
 
 .bild7::before{
     content: "";
-    background: url("../img/design/7.jpg");
+    background: url("img/design/7.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -562,7 +562,7 @@ video{
 
 .bild71::before{
     content: "";
-    background: url("../img/html/7.jpg");
+    background: url("img/html/7.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -575,7 +575,7 @@ video{
 
 .bild73::before{
     content: "";
-    background: url("../img/js/7.jpg");
+    background: url("img/js/7.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -588,7 +588,7 @@ video{
 
 .bild74::before{
     content: "";
-    background: url("../img/konzept/7.jpg");
+    background: url("img/konzept/7.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -601,7 +601,7 @@ video{
 
 .bild75::before{
     content: "";
-    background: url("../img/gui/7.jpg");
+    background: url("img/gui/7.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -614,7 +614,7 @@ video{
 
 .bild76::before{
     content: "";
-    background: url("../img/remote/7.jpg");
+    background: url("img/remote/7.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
