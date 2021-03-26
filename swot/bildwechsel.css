@@ -535,17 +535,13 @@ video{
     top: 0px;
 }
 
-.bild7, .bild71, .bild72, .bil73, .bild74, .bild76{
+.bild7, .bild71, .bild72, .bild73, .bild74, .bild75, .bild76{
     grid-column-start: 2;
     grid-column-end: 4;
     position: relative;
 }
 
-.bild75{
-    grid-column-start: 2;
-    grid-column-end: 4;
-    position: relative;
-}
+
 
 .bild7::before{
     content: "";
