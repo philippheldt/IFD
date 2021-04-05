@@ -1,4 +1,4 @@
-# Interface Design Abgaben
+Abgaben
 
 | Aufgabe | Link |
 | :----------- | -----------: | 
