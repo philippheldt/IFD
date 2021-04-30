@@ -1,8 +1,16 @@
 * {
   margin: 0px;
   padding: 0px;
-  font: normal normal bold 23px/28px Montserrat;
   color: white;
+  font-family: Montserrat;
+}
+
+h2 {
+  font: normal normal bold 23px/28px Montserrat;
+}
+
+p {
+  font-size: 12px;
 }
 
 body {
@@ -53,11 +61,11 @@ body {
 }
 
 #Heatmap path {
-  transition: all ease 0.5s;
+  transition: all ease 0.3s;
 }
 
 #Heatmap path:hover {
-  stroke-width: 10px;
+  stroke-width: 9px;
 }
 
 .seitenleiste {
@@ -156,4 +164,63 @@ body {
 .overlay .objNav img ~ img ~ img {
   width: 15px;
   cursor: pointer;
+}
+
+.overlay .slider {
+  position: fixed;
+  background: transparent linear-gradient(157deg, #E2D9C7 0%, #CCCCB4 100%) 0% 0% no-repeat padding-box;
+  width: 22%;
+  height: 90vh;
+  border-radius: 0px 20px 20px 0px;
+  top: 0px;
+  left: 0px;
+  padding: 50px;
+  display: none;
+}
+
+.overlay .slider div {
+  margin-top: 15px;
+  padding: 20px;
+  background: linear-gradient(118deg, #403E38 0%, #373732 59%, #292824 100%);
+  border-radius: 15px;
+}
+
+.overlay .slider div h2 {
+  color: white;
+}
+
+.overlay .slider div img {
+  width: 90%;
+  padding: 20px;
+}
+
+.overlay .slider div .button {
+  width: 65px;
+  border-radius: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px 10px 5px 10px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.overlay .slider div .button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.overlay .slider .navSlider {
+  background: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.overlay .slider .navSlider h2 {
+  color: #2C2C28;
+  margin-top: 20px;
+}
+
+.overlay .slider .navSlider #arrow {
+  transform: rotate(180deg);
+  cursor: pointer;
+  width: 30px;
 }
