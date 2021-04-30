@@ -1,0 +1,171 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font: normal normal bold 23px/28px Montserrat;
+    color: white;
+}
+
+body{
+    background-image: linear-gradient(118deg, #403E38 0%, #373732 59%, #292824 100%);
+}
+
+.container{
+    margin: 0% 10% 0% 10%;
+    display: grid;
+    grid-template-columns: 4fr 1fr ;
+}
+
+#gerate {
+    circle {
+        transition: all ease 0.5s;
+        cursor: pointer;
+    }
+    
+    #router-2:hover{
+        transform: matrix(1.5, 0, 0, 1.5, 440, 330);
+    }
+
+    #echo-2:hover{
+        transform: matrix(1.5, 0, 0, 1.5, 623, 516);
+    }
+
+    #macBook-2:hover{
+        transform: matrix(1.5, 0, 0, 1.5, 623, 557);
+    }
+
+    #laptop-2:hover{
+        transform: matrix(1.5, 0, 0, 1.5, 867, 374);
+    }
+
+    #iPhone-2:hover{
+        transform: matrix(1.5, 0, 0, 1.5, 448, 738);
+    }
+
+    #samsung-2:hover{
+        transform: matrix(1.5, 0, 0, 1.5, 763, 36);
+    }
+    
+    #fridge-2:hover{
+        transform: matrix(1.5, 0, 0, 1.5, 618, 236);
+    }
+
+    #iPad-2:hover{
+        transform: matrix(1.5, 0, 0, 1.5, 435, 137);
+    }
+}
+
+#Heatmap{
+    path{
+        transition: all ease 0.5s;
+
+        
+    }
+    path:hover{
+        
+        stroke-width: 10px
+
+    }
+}
+
+.seitenleiste{
+    display: grid;
+    margin: 3em 0 4em 0;
+    text-align: center;
+    justify-content: center;
+}
+
+.nutzer{
+   
+    background: rgba($color: #000000, $alpha: 0.1);
+    backdrop-filter: blur(10px);
+    height: 220px;
+    width: 220px;
+    border-radius: 1000px;
+    position: relative;
+    transition: ease 0.2s;
+    opacity: 100%;
+    
+    img{
+        position: absolute;
+        top: 75px;
+        left: 75px;
+        width: 70px;
+    }
+    
+    svg{
+        position: absolute;
+        top: -1.5px;
+        left: -2px; 
+        
+        
+        path{
+            cursor: pointer;
+            transition: ease 0.1s;
+            
+        }
+
+        path:hover{
+            stroke: #F2DC66;
+            filter:url(#upload);
+        }
+    }
+    
+}
+
+.nutzer:hover{
+    background: rgba($color: #000000, $alpha: 0.2);
+}
+
+.nutzer:hover ~ .nutzer{
+    opacity: 50%;
+}
+
+
+.button{
+    border-radius: 30px;
+    background: rgba($color: #000000, $alpha: 0.2);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    h2{
+        font-size: 15px;
+    }
+}
+
+.button:hover{
+    background: rgba($color: #000000, $alpha: 0.3);
+}
+
+.overlay{
+    .dauer{
+        text-align: center;
+        position: fixed;
+        top: 5%;
+        left: 5%;
+    }
+    .objNav{
+        display: flex;
+        text-align: center;
+        position: fixed;
+        bottom: 10%;
+        right: 50%;
+        justify-content: space-between;
+        width: 200px;
+
+        img {
+            width: 5px;
+            cursor: pointer;
+        }
+
+        img ~ img {
+            width: 10px;
+            cursor: pointer;
+        }
+
+        img ~ img ~ img {
+            width: 15px;
+            cursor: pointer;
+        }
+    }
+}

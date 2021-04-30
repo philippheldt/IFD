@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="224.651" height="224.651" viewBox="0 0 224.651 224.651">
+  <defs>
+    <filter id="upload" x="76.804" y="27.316" width="120.532" height="170.019" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#f2dc66" flood-opacity="0.639"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="nuter1" transform="translate(-30.044 -30.044)">
+    <path id="download" d="M78.281,0a48.683,48.683,0,0,1-48.66,48.66A48.585,48.585,0,0,1,0,38.6" transform="translate(142.37 171.99) rotate(-90)" fill="none" stroke="#625f53" stroke-linecap="round" stroke-width="10" fill-rule="evenodd"/>
+    <g transform="matrix(1, 0, 0, 1, 30.04, 30.04)" filter="url(#upload)">
+      <path id="upload-2" data-name="upload" d="M136.019,17.419A68.01,68.01,0,1,1,2.26,0" transform="translate(94.91 180.34) rotate(-90)" fill="none" stroke="#625f53" stroke-linecap="round" stroke-width="10" fill-rule="evenodd"/>
+    </g>
+    <path id="bandbreite1" d="M85.879,0A85.92,85.92,0,0,1,0,85.879" transform="translate(142.37 142.37) rotate(-90)" fill="none" stroke="#625f53" stroke-linecap="round" stroke-width="10" fill-rule="evenodd"/>
+    <g id="aussen" transform="matrix(-0.966, 0.259, -0.259, -0.966, 254.695, 207.221)" fill="none" stroke="rgba(50,50,45,0)" stroke-width="1">
+      <ellipse cx="91.714" cy="91.714" rx="91.714" ry="91.714" stroke="none"/>
+      <ellipse cx="91.714" cy="91.714" rx="91.214" ry="91.214" fill="none"/>
+    </g>
+  </g>
+</svg>
