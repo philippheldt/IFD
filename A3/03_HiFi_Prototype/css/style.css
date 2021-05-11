@@ -143,6 +143,15 @@ body {
   display: inline;
 }
 
+#connect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: none;
+  pointer-events: none;
+}
+
 .button:hover {
   background: rgba(0, 0, 0, 0.3);
 }
@@ -190,6 +199,7 @@ body {
   padding: 50px;
   transform: translate3d(-30vw, 0, 0);
   transition: transform ease 0.4s;
+  overflow-y: scroll;
 }
 
 .overlay .slider div {
@@ -204,8 +214,19 @@ body {
 }
 
 .overlay .slider div img {
+  width: 100%;
+  padding-top: 10px;
+  display: none;
+}
+
+.overlay .slider div #arrow {
   width: 90%;
-  padding: 20px;
+  padding: 20px 3px 20px 20px;
+  display: block;
+}
+
+.overlay .slider div #anwendung {
+  display: block;
 }
 
 .overlay .slider div .button {
@@ -258,6 +279,7 @@ body {
   padding: 50px;
   transform: translate3d(30vw, 0, 0);
   transition: transform ease 0.4s;
+  overflow-y: scroll;
 }
 
 .overlay .sliderright div {
@@ -272,8 +294,15 @@ body {
 }
 
 .overlay .sliderright div img {
+  width: 100%;
+  padding-top: 10px;
+  display: none;
+}
+
+.overlay .sliderright div #arrowright {
   width: 90%;
-  padding: 20px;
+  padding: 0px 3px 20px 20px;
+  display: block;
 }
 
 .overlay .sliderright div .button {
@@ -392,4 +421,95 @@ model-viewer {
   transform-origin: 850px 100px;
   transform: scale(2.8);
   transition: transform-origin ease 1s;
+}
+
+@media only screen and (max-width: 1800px) {
+  .svgElem {
+    transition: transform ease 1s;
+    height: 100vh;
+  }
+  body {
+    background: #403E38;
+  }
+  .seitenleiste {
+    margin-right: 75%;
+  }
+  .nutzer {
+    height: 170px;
+    width: 170px;
+  }
+  .nutzer img {
+    width: 58px;
+    top: 58px;
+    left: 58px;
+  }
+  .nutzer svg {
+    width: 180px;
+    top: -25px;
+    left: -1.5px;
+  }
+  .container {
+    margin: 0px;
+  }
+  .svgElem.mb {
+    transform-origin: 700px 450px;
+    transform: scale(2.8);
+  }
+  .svgElem.ipo {
+    transform-origin: 500px 600px;
+    transform: scale(2.8);
+  }
+  .svgElem.ipa {
+    transform-origin: 500px 50px;
+    transform: scale(2.8);
+  }
+  .svgElem.fri {
+    transform-origin: 700px 150px;
+    transform: scale(2.8);
+  }
+  .svgElem.lt {
+    transform-origin: 900px 300px;
+    transform: scale(2.8);
+  }
+  .svgElem.ss {
+    transform-origin: 750px 0px;
+    transform: scale(2.8);
+  }
+  .svgElem.mb2 {
+    transform-origin: 700px 450px;
+    transform: scale(2.8);
+    transition: transform-origin ease 1s;
+  }
+  .svgElem.ipo2 {
+    transform-origin: 500px 600px;
+    transform: scale(2.8);
+    transition: transform-origin ease 1s;
+  }
+  .svgElem.ipa2 {
+    transform-origin: 500px 50px;
+    transform: scale(2.8);
+    transition: transform-origin ease 1s;
+  }
+  .svgElem.fri2 {
+    transform-origin: 700px 150px;
+    transform: scale(2.8);
+    transition: transform-origin ease 1s;
+  }
+  .svgElem.lt2 {
+    transform-origin: 900px 300px;
+    transform: scale(2.8);
+    transition: transform-origin ease 1s;
+  }
+  .svgElem.ss2 {
+    transform-origin: 750px 0px;
+    transform: scale(2.8);
+    transition: transform-origin ease 1s;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .data svg {
+    width: 100%;
+    height: 100%;
+  }
 }
