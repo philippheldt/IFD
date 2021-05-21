@@ -348,6 +348,10 @@
         </div>
 
         <div class="overlay">
+            <div class="legende">
+                <img src="img/signalstarke.png" id="legendeS" alt="">
+                <img src="img/nutzungsdauer.png" id="legendeN" alt="">
+            </div>
             <div class="dauer" >
                 <div class="ndauer" onclick="nutzan()" onmousemove="showTooltip(evt, 'BANDBREITENNUTZUNG: 23%');" onmouseout="hideTooltip();"> 
                     <img src="img/nutzung.png" alt="">
@@ -814,6 +818,8 @@
             document.getElementsByClassName('ddElem')[0].style.display = 'block';
             document.getElementsByClassName('ndauer')[0].style.display = 'none';
             document.getElementsByClassName('signal')[0].style.display = 'block';
+            document.getElementById('legendeS').style.display = 'none';
+            document.getElementById('legendeN').style.display = 'block';
         }
 
         function nutzaus(){
@@ -821,6 +827,8 @@
             document.getElementsByClassName('ddElem')[0].style.display = 'none';
             document.getElementsByClassName('ndauer')[0].style.display = 'block';
             document.getElementsByClassName('signal')[0].style.display = 'none';
+            document.getElementById('legendeS').style.display = 'block';
+            document.getElementById('legendeN').style.display = 'none';
         }
 
 
