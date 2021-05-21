@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="224.651" height="224.651" viewBox="0 0 224.651 224.651">
+  <g id="nutzer3" transform="translate(-30.044 -30.65)">
+    <path id="Path_2" data-name="Path 2" d="M78.281,0a48.683,48.683,0,0,1-48.66,48.66A48.585,48.585,0,0,1,0,38.6" transform="translate(142.37 171.99) rotate(-90)" fill="none" stroke="#625f53" stroke-linecap="round" stroke-width="10" fill-rule="evenodd"/>
+    <path id="Path_3" data-name="Path 3" d="M68.01,0A68.042,68.042,0,0,1,0,68.01" transform="translate(142.37 142.37) rotate(-90)" fill="none" stroke="#625f53" stroke-linecap="round" stroke-width="10" fill-rule="evenodd"/>
+    <path id="Path_4" data-name="Path 4" d="M53.018,0A86.017,86.017,0,0,1,0,79.358" transform="translate(142.37 109.509) rotate(-90)" fill="none" stroke="#625f53" stroke-linecap="round" stroke-width="10" fill-rule="evenodd"/>
+    <g id="aussen" transform="matrix(-0.966, 0.259, -0.259, -0.966, 254.695, 207.827)" fill="none" stroke="rgba(50,50,45,0)" stroke-width="1">
+      <ellipse cx="91.714" cy="91.714" rx="91.714" ry="91.714" stroke="none"/>
+      <ellipse cx="91.714" cy="91.714" rx="91.214" ry="91.214" fill="none"/>
+    </g>
+  </g>
+</svg>

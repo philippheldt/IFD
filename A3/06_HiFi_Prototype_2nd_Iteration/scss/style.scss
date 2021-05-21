@@ -1,0 +1,623 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-family: Montserrat;
+}
+
+h2{
+    font: normal normal bold 23px/28px Montserrat;
+}
+
+p{
+    font-size: 12px;
+}
+
+body{
+    background-image: linear-gradient(118deg, #403E38 0%, #373732 59%, #292824 100%);
+}
+
+.container{
+    margin: 0% 10% 0% 10%;
+    display: grid;
+    grid-template-columns: 4fr 1fr ;
+}
+
+#gerate {
+    circle {
+        transition: all ease 0.5s;
+        cursor: pointer;
+    }
+    
+    #router-2:hover{
+        transform: matrix(1.5, 0, 0, 1.5, 440, 330);
+    }
+
+    #echo-2:hover{
+        transform: matrix(1.5, 0, 0, 1.5, 623, 516);
+    }
+
+    #macBook-2:hover{
+        transform: matrix(1.5, 0, 0, 1.5, 623, 557);
+    }
+
+    #laptop-2:hover{
+        transform: matrix(1.5, 0, 0, 1.5, 867, 374);
+    }
+
+    #iPhone-2:hover{
+        transform: matrix(1.5, 0, 0, 1.5, 448, 738);
+    }
+
+    #samsung-2:hover{
+        transform: matrix(1.5, 0, 0, 1.5, 763, 36);
+    }
+    
+    #fridge-2:hover{
+        transform: matrix(1.5, 0, 0, 1.5, 618, 236);
+    }
+
+    #iPad-2:hover{
+        transform: matrix(1.5, 0, 0, 1.5, 435, 137);
+    }
+}
+
+#Heatmap{
+    path{
+        transition: all ease 0.3s;
+        
+    }
+    path:hover{
+        
+        stroke-width: 9px
+
+    }
+}
+
+.seitenleiste{
+    display: grid;
+    margin: 3em 0 4em 0;
+    text-align: center;
+    justify-content: center;
+    transform: translate3d(0vw, 0, 0);
+    transition: ease 0.3s;
+}
+
+.seitenleiste.show{
+    transform: translate3d(-20vw, 0, 0);
+}
+
+.nutzer{
+   
+    background: rgba($color: #000000, $alpha: 0.1);
+    backdrop-filter: blur(10px);
+    height: 220px;
+    width: 220px;
+    border-radius: 1000px;
+    position: relative;
+    transition: ease 0.2s;
+    opacity: 100%;
+    
+    img{
+        position: absolute;
+        top: 75px;
+        left: 75px;
+        width: 70px;
+        
+    }
+
+    
+
+    svg{
+        position: absolute;
+        top: -1.5px;
+        left: -2px; 
+        
+        
+        
+        path{
+            cursor: pointer;
+            transition: ease 0.1s;
+            
+        }
+
+        path:hover{
+            stroke: #F2DC66;
+            filter:url(#upload);
+        }
+    }
+    
+}
+
+.nutzer:hover{
+    background: rgba($color: #000000, $alpha: 0.2);
+}
+
+.nutzer:hover ~ .nutzer{
+    opacity: 50%;
+}
+
+
+.button{
+    border-radius: 30px;
+    background: rgba($color: #000000, $alpha: 0.2);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    h2{
+        font-size: 15px;
+        display: inline;
+    }
+    img{
+        margin: 0px 10px -8px 0px;
+        width: 25px;
+        display: inline;
+    }
+}
+
+
+#connect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: none;
+    pointer-events: none;
+}
+
+.button:hover{
+    background: rgba($color: #000000, $alpha: 0.3);
+}
+
+.overlay{
+    .dauer{
+        text-align: center;
+        position: fixed;
+        bottom: 50px;
+        left: 50px;
+        cursor: pointer;
+        img{
+            width: 100px;
+            transition: all 0.3s;
+        }
+
+        img:hover{
+            filter: brightness(90%);
+            filter: drop-shadow(100);
+        }
+    }
+    .objNav{
+        display: flex;
+        text-align: center;
+        position: fixed;
+        bottom: 80px;
+        left: 600px;
+        justify-content: space-between;
+        width: 200px;
+
+        img {
+            width: 15px;
+            cursor: pointer;
+        }
+
+        img ~ img {
+            width: 15px;
+            cursor: pointer;
+        }
+
+        img ~ img ~ img {
+            width: 15px;
+            cursor: pointer;
+        }
+    }
+
+    .slider{
+        position: fixed;
+        background: transparent linear-gradient(157deg, #E2D9C7 0%, #CCCCB4 100%) 0% 0% no-repeat padding-box;
+        width: 22%;
+        height: 90vh;
+        border-radius: 0px 20px 20px 0px;
+        top: 0px;
+        left: 0px;
+        padding: 50px;
+        transform: translate3d(-30vw, 0, 0);
+        transition: transform ease 0.4s;
+        overflow-y: scroll;
+    
+
+        div{
+            margin-top: 15px;
+            padding: 20px;
+            background: linear-gradient(118deg, #403E38 0%, #373732 59%, #292824 100%);
+            border-radius: 15px;
+            h2{
+                color: white;
+            }
+
+            img{
+                width: 100%;
+                padding-top: 10px;
+                display: none;
+            }
+
+            #arrow{
+                width: 90%;
+                padding: 20px 3px 20px 20px;
+                display: block;
+            }
+
+            #anwendung{
+                display: block;
+            }
+
+            .button{
+                width: 65px;
+                border-radius: 30px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding: 5px 10px 5px 10px;
+                background: rgba($color: white, $alpha: 0.05);
+            }
+            .button:hover{
+            
+                background: rgba($color: white, $alpha: 0.1);
+            }
+        }
+
+        .navSlider{
+            background: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            
+            h2{
+                color: #2C2C28;
+                margin-top: 20px;
+            }
+
+            #arrow{ 
+                transform: rotate(180deg);
+                cursor: pointer;
+                width: 30px;
+            }
+        }
+    }
+    
+    .slider.show {
+        transform: translate3d(0px, 0, 0);
+    }
+
+
+    
+
+    .sliderright.show {
+        transform: translate3d(0px, 0, 0);
+    }
+
+    .sliderright{
+        position: fixed;
+        background: transparent linear-gradient(157deg, #E2D9C7 0%, #CCCCB4 100%) 0% 0% no-repeat padding-box;
+        width: 22%;
+        height: 90vh;
+        border-radius: 20px 0px 0px 20px;
+        top: 0px;
+        right: 0px;
+        padding: 50px;
+        transform: translate3d(30vw, 0, 0);
+        transition: transform ease 0.4s;
+        overflow-y: scroll;
+    
+
+        div{
+            margin-top: 15px;
+            padding: 20px;
+            background: linear-gradient(118deg, #403E38 0%, #373732 59%, #292824 100%);
+            border-radius: 15px;
+            h2{
+                color: white;
+            }
+
+            img{
+                width: 100%;
+                padding-top: 10px;
+                display: none;
+            }
+
+            #arrowright{
+                width: 90%;
+                padding: 0px 3px 20px 20px;
+                display: block;
+            }
+            .button{
+                width: 65px;
+                border-radius: 30px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding: 5px 10px 5px 10px;
+                background: rgba($color: white, $alpha: 0.05);
+            }
+            .button:hover{
+            
+                background: rgba($color: white, $alpha: 0.1);
+            }
+        }
+
+        .navSlider{
+            background: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            
+            h2{
+                color: #2C2C28;
+                margin-top: 20px;
+            }
+
+            #arrowright{ 
+                transform: rotate(180deg);
+                cursor: pointer;
+                width: 30px;
+            }
+        }
+    }
+}
+
+model-viewer{
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    display: none;
+}
+
+.signal{
+    display: none;
+}
+
+#nutzer1, #nutzer2, #nutzer3{
+    cursor: pointer;
+}
+
+.svgElem{
+    transform-origin: 700px 600px;
+    transform: scale(1);
+    transition: transform ease 1s;
+}
+
+.svgElem.mb{
+    transform-origin: 700px 600px;
+    transform: scale(2.8);
+}
+
+.svgElem.ipo{
+    transform-origin: 500px 900px;
+    transform: scale(2.8);
+}
+
+.svgElem.ipa{
+    transform-origin: 500px 200px;
+    transform: scale(2.8);
+}
+
+.svgElem.fri{
+    transform-origin: 700px 300px;
+    transform: scale(2.8);
+}
+
+.svgElem.lt{
+    transform-origin: 900px 450px;
+    transform: scale(2.8);
+}
+
+.svgElem.ss{
+    transform-origin: 850px 100px;
+    transform: scale(2.8);
+}
+
+.svgElem.mb2{
+    transform-origin: 700px 600px;
+    transform: scale(2.8);
+    transition: transform-origin ease 1s;
+}
+
+.svgElem.ipo2{
+    transform-origin: 500px 900px;
+    transform: scale(2.8);
+    transition: transform-origin ease 1s;
+}
+
+.svgElem.ipa2{
+    transform-origin: 500px 200px;
+    transform: scale(2.8);
+    transition: transform-origin ease 1s;
+}
+
+.svgElem.fri2{
+    transform-origin: 700px 300px;
+    transform: scale(2.8);
+    transition: transform-origin ease 1s;
+}
+
+.svgElem.lt2{
+    transform-origin: 900px 450px;
+    transform: scale(2.8);
+    transition: transform-origin ease 1s;
+}
+
+.svgElem.ss2{
+    transform-origin: 850px 100px;
+    transform: scale(2.8);
+    transition: transform-origin ease 1s;
+}
+
+
+@media only screen and (max-width: 1800px) {
+    .svgElem{
+        transition: transform ease 1s;
+        height: 100vh;
+    }
+
+    body{
+        background: #403E38;
+    }
+
+    .seitenleiste{
+        margin-right: 75%;
+    }
+
+    .nutzer{
+        height: 170px;
+        width: 170px;
+
+       img{
+           width: 58px;
+           top: 58px;
+           left: 58px;
+       }
+
+       svg{
+           width: 180px;
+           top: -25px;
+           left: -1.5px;
+       }
+    }
+
+
+    
+    .container{
+        margin: 0px;
+    }
+
+    .svgElem.mb{
+        transform-origin: 700px 450px;
+        transform: scale(2.8);
+    }
+    
+    .svgElem.ipo{
+        transform-origin: 500px 600px;
+        transform: scale(2.8);
+    }
+    
+    .svgElem.ipa{
+        transform-origin: 500px 50px;
+        transform: scale(2.8);
+    }
+    
+    .svgElem.fri{
+        transform-origin: 700px 150px;
+        transform: scale(2.8);
+    }
+    
+    .svgElem.lt{
+        transform-origin: 900px 300px;
+        transform: scale(2.8);
+    }
+    
+    .svgElem.ss{
+        transform-origin: 750px 0px;
+        transform: scale(2.8);
+    }
+    
+    .svgElem.mb2{
+        transform-origin: 700px 450px;
+        transform: scale(2.8);
+        transition: transform-origin ease 1s;
+    }
+    
+    .svgElem.ipo2{
+        transform-origin: 500px 600px;
+        transform: scale(2.8);
+        transition: transform-origin ease 1s;
+    }
+    
+    .svgElem.ipa2{
+        transform-origin: 500px 50px;
+        transform: scale(2.8);
+        transition: transform-origin ease 1s;
+    }
+    
+    .svgElem.fri2{
+        transform-origin: 700px 150px;
+        transform: scale(2.8);
+        transition: transform-origin ease 1s;
+    }
+    
+    .svgElem.lt2{
+        transform-origin: 900px 300px;
+        transform: scale(2.8);
+        transition: transform-origin ease 1s;
+    }
+    
+    .svgElem.ss2{
+        transform-origin: 750px 0px;
+        transform: scale(2.8);
+        transition: transform-origin ease 1s;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    .data{
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+#tooltip {
+    font-weight: bold;
+    font-size: 10px;
+    background: rgba($color: #000000, $alpha: 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 100px;
+    padding: 10px;
+  }
+
+
+  .button-slider{
+    position: fixed;
+    bottom: 80px;
+    left: 180px;
+    display: flex;
+    border-radius: 30px;
+    background: rgba($color: #000000, $alpha: 0.2);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: 0.4s;
+    width: 360px;
+    h2{
+        font-size: 15px;
+        display: inline;
+    }
+}
+
+.button-active{
+    display: flex;
+    border-radius: 30px;
+    background: rgba($color: #000000, $alpha: 0.2);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    h2{
+        font-size: 15px;
+        display: inline;
+    }
+}
+
+.button-inactive{
+    display: flex;
+    border-radius: 30px;
+    background: rgba($color: #000000, $alpha: 0);
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    h2{
+        font-size: 15px;
+        display: inline;
+    }
+}
+ 
