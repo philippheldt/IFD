@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>WiFi-VUI</title>
+</head>
+<body>
+
+    <div class="fixed">
+        <div class="fragefeld">
+            <div class="hint">
+                <p class="question"></p>
+                 <h3 class="answer"></h3>
+                <p id="hint-1">Versuche es mit: </p><h3 id="hint-2">„Welches Gerät verbraucht aktuell die meisten Daten?“</h3>
+            </div>
+            <div class="player">
+                <img src="line.png" class="line" alt="">
+                <img src="mic.png" alt="" class="talk">
+                <video autoplay loop muted id="video1"><source src="wave.mp4"></video>
+            </div>
+        </div>
+   </div>
+    <div class="container">
+       <div class="verlauf"></div>
+    </div>
+    <audio src="beep.mp3"autostart="false" width="0" height="0" id="sound1" enablejavascript="true"></audio>
+
+    <script src="app.js"></script>
+</body>
+</html>

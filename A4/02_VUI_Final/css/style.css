@@ -1,0 +1,94 @@
+body{
+    background: #403E38;
+    color: white;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+
+.fixed{
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background: transparent linear-gradient( 157deg, #E2D9C7 0%, #CCCCB4 100%) 0% 0% no-repeat padding-box;
+    border-radius: 20px 20px 0px 0px;
+    margin-left: 0px;
+    
+}
+.fragefeld{
+    margin: 50px  20% 50px  20%;
+    color: #403E38; ;
+}
+
+h3{
+    font-family: Montserrat;
+}
+
+p{
+    font-family: Montserrat;
+    color: #4d4b48;
+}
+
+hr{
+    filter: opacity(10%);
+}
+
+.bgd{
+    width: 100%;
+    position:fixed;
+    z-index:-1;
+    top: 0px;
+    bottom: 0px;
+}
+
+.line{
+    position: absolute;
+    width: 78%;
+    left: 125px;
+    bottom: 60px;
+}
+
+
+video{
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    display: none;
+    z-index: 40;
+}
+
+.talk{
+    width: 80px;
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+    margin: 20px;
+}
+
+.player{
+    position: relative;
+    cursor: pointer;
+    background-color: #393833;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+.container{
+    margin: 100px  20% 20%  20%;
+}
+
+.verlauf{
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.hint{
+    background: #D1CFB8;
+    padding: 20px;
+    border-radius: 20px;
+}
