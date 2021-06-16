@@ -11,4 +11,4 @@
 | GUI - User Testing |[Zur Aufgabe 7](https://github.com/philippjenny/IFD/blob/main/A3/05_User_Testing) |
 | GUI - User Version 2 |[Zur Aufgabe 8](https://philippjenny.github.io/IFD/A3/06_HiFi_Prototype_2nd_Iteration) \ [Dokumentation](https://github.com/philippjenny/IFD/blob/main/A3/07_Dokumentation/)|
 | VUI - Concept |[Zur Aufgabe 10](https://github.com/philippjenny/IFD/blob/main/A4/01_Konzept_VUI) |
-| VUI - Prototype |[Zur Aufgabe 11](https://github.com/philippjenny/IFD/blob/main/A4/02_VUI_Final) |
+| VUI - Prototype |[Zur Aufgabe 11](https://philippjenny.github.io/IFD/A4/02_VUI_Final) |
