@@ -6,6 +6,7 @@ const line = document.getElementById('video1');
 const sound = document.getElementById('sound1');
 const hint1 = document.getElementById('hint-1');
 const hint2 = document.getElementById('hint-2');
+var i = 0;
 
 const hints = [
     '„Welches Gerät verbraucht aktuell die meisten Daten?“',
@@ -84,29 +85,49 @@ function readOutLoud(message){
         line.style.display = "none";
         question.style.display = "block";
         answer.style.display = "block";
+       
         const finalText = geratDaten[Math.floor(Math.random() * geratDaten.length)];
         speech.text = finalText;
         answer.textContent = finalText;
         setTimeout(function () {
             recogninition.start();
         }, 7000);
+        i = 1;
     } 
 
-    if(message.includes ('ja') && answer.innerHTML.includes('Elisas iPad verbraucht aktuell mit Netflix die meisten Daten. Soll ich mich vom Gerät entkoppeln?')){
+    if(message.includes ('ja') && i===1){
         line.style.display = "none";
         question.style.display = "block";
         answer.style.display = "block";
+       
         speech.text = 'Die Verbindung zum Internet wurde erfolgreich getrennt.';
         answer.textContent = 'Die Verbindung zum Internet wurde erfolgreich getrennt.';
-    } else if (message.includes ('ja') && answer.innerHTML.includes('Philipps MacBook verbraucht aktuell mit Zoom die meisten Daten. Soll ich mich vom Gerät entkoppeln?')){
-        line.style.display = "none";
-        question.style.display = "block";
-        answer.style.display = "block";
-        speech.text = 'Die Verbindung zum Internet wurde erfolgreich getrennt.';
-        answer.textContent = 'Die Verbindung zum Internet wurde erfolgreich getrennt.';
-    }
+         i = 0;
+    } 
 
-    if(message.includes ('nein') && answer.innerHTML.includes('Alles klar! Soll ich mich stattdessen von Samsung Galaxy A10 mit dem zweitgrößten Datenverbrauch entkoppeln? Das Gerät verwendet aktuell YouTube.')){
+
+    if(message.includes ('nein') && i===1){
+        line.style.display = "none";
+        question.style.display = "block";
+        answer.style.display = "block";
+    
+        speech.text = 'Alles klar! Soll ich mich stattdessen von Samsung Galaxy A10 mit dem zweitgrößten Datenverbrauch entkoppeln? Das Gerät verwendet aktuell YouTube.';
+        answer.textContent = 'Alles klar! Soll ich mich stattdessen von Samsung Galaxy A10 mit dem zweitgrößten Datenverbrauch entkoppeln? Das Gerät verwendet aktuell YouTube.';
+        setTimeout(function () {
+            recogninition.start();
+        }, 11000);
+        i = 2;
+    } 
+
+    if(message.includes ('ja') && i===2){
+        line.style.display = "none";
+        question.style.display = "block";
+        answer.style.display = "block";
+        speech.text = 'Die Verbindung zum Internet wurde erfolgreich getrennt.';
+        answer.textContent = 'Die Verbindung zum Internet wurde erfolgreich getrennt.';
+    } 
+    
+    if(message.includes ('nein') && i===2){
         line.style.display = "none";
         question.style.display = "block";
         answer.style.display = "block";
@@ -114,33 +135,7 @@ function readOutLoud(message){
         answer.textContent = 'Alles klar! Samsung Galaxy A10 bleibt mit dem Internet verbunden.';
     } 
 
-    if(message.includes ('nein') && answer.innerHTML.includes('Elisas iPad verbraucht aktuell mit Netflix die meisten Daten. Soll ich mich vom Gerät entkoppeln?')){
-        line.style.display = "none";
-        question.style.display = "block";
-        answer.style.display = "block";
-        speech.text = 'Alles klar! Soll ich mich stattdessen von Samsung Galaxy A10 mit dem zweitgrößten Datenverbrauch entkoppeln? Das Gerät verwendet aktuell YouTube.';
-        answer.textContent = 'Alles klar! Soll ich mich stattdessen von Samsung Galaxy A10 mit dem zweitgrößten Datenverbrauch entkoppeln? Das Gerät verwendet aktuell YouTube.';
-        setTimeout(function () {
-            recogninition.start();
-        }, 11000);
-    } else if (message.includes ('nein') && answer.innerHTML.includes('Philipps MacBook verbraucht aktuell mit Zoom die meisten Daten. Soll ich mich vom Gerät entkoppeln?')){
-        line.style.display = "none";
-        question.style.display = "block";
-        answer.style.display = "block";
-        speech.text = 'Alles klar! Soll ich mich stattdessen von Samsung Galaxy A10 mit dem zweitgrößten Datenverbrauch entkoppeln? Das Gerät verwendet aktuell YouTube.';
-        answer.textContent = 'Alles klar! Soll ich mich stattdessen von Samsung Galaxy A10 mit dem zweitgrößten Datenverbrauch entkoppeln? Das Gerät verwendet aktuell YouTube.';
-        setTimeout(function () {
-            recogninition.start();
-        }, 11000);
-    }
 
-    if(message.includes ('ja') && answer.innerHTML.includes('Alles klar! Soll ich mich stattdessen von Samsung Galaxy A10 mit dem zweitgrößten Datenverbrauch entkoppeln? Das Gerät verwendet aktuell YouTube.')){
-        line.style.display = "none";
-        question.style.display = "block";
-        answer.style.display = "block";
-        speech.text = 'Die Verbindung zum Internet wurde erfolgreich getrennt.';
-        answer.textContent = 'Die Verbindung zum Internet wurde erfolgreich getrennt.';
-    } 
 
     
     //Ast 2
