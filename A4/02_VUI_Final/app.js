@@ -18,7 +18,7 @@ const hints = [
 
 
     setInterval(function(){ const finalText = hints[Math.floor(Math.random() * hints.length)];
-        hint2.textContent = finalText;}, 4000);
+        hint2.textContent = finalText;}, 5000);
 
 
 //Vorlage Antworten
@@ -44,6 +44,8 @@ recogninition.onstart = function(){
 
     hint1.style.display = "none";
     hint2.style.display = "none";
+
+    document.getElementById('knopf').textContent = 'VORSCHLÄGE';
 
     var element = document.createElement("p");
     element.appendChild(document.createTextNode(question.innerHTML));
@@ -95,6 +97,15 @@ function readOutLoud(message){
         i = 1;
     } 
 
+    if(message.includes ('nein') && i===2){
+        line.style.display = "none";
+        question.style.display = "block";
+        answer.style.display = "block";
+        speech.text = 'Alles klar! Samsung Galaxy A10 bleibt mit dem Internet verbunden.';
+        answer.textContent = 'Alles klar! Samsung Galaxy A10 bleibt mit dem Internet verbunden.';
+        i = 0;
+    } 
+
     if(message.includes ('ja') && i===1){
         line.style.display = "none";
         question.style.display = "block";
@@ -125,15 +136,9 @@ function readOutLoud(message){
         answer.style.display = "block";
         speech.text = 'Die Verbindung zum Internet wurde erfolgreich getrennt.';
         answer.textContent = 'Die Verbindung zum Internet wurde erfolgreich getrennt.';
+        i = 0;
     } 
-    
-    if(message.includes ('nein') && i===2){
-        line.style.display = "none";
-        question.style.display = "block";
-        answer.style.display = "block";
-        speech.text = 'Alles klar! Samsung Galaxy A10 bleibt mit dem Internet verbunden.';
-        answer.textContent = 'Alles klar! Samsung Galaxy A10 bleibt mit dem Internet verbunden.';
-    } 
+
 
 
 
@@ -151,32 +156,37 @@ function readOutLoud(message){
         setTimeout(function () {
             recogninition.start();
         }, 7000);
+        i = 1
     }
 
-    if(message.includes('heute')){
+    if(message.includes('heute') && i===1){
         line.style.display = "none";
         question.style.display = "block";
         answer.style.display = "block";
         speech.text = 'Heute wurde das Internet im Wohnzimmer am meisten verwendet. Hinweis: Du hast dort ein vergleichsweise schwaches WLAN Signal!';
         answer.textContent = 'Heute wurde das Internet im Wohnzimmer am meisten verwendet. Hinweis: Du hast dort ein vergleichsweise schwaches WLAN Signal!';
-    } else if(message.includes('letzte woche')){
+        i = 0;
+    } else if(message.includes('letzte woche') && i===1){
         line.style.display = "none";
         question.style.display = "block";
         answer.style.display = "block";
         speech.text = 'Letzte Woche wurde das Internet im Büro am meisten verwendet.';
         answer.textContent = 'Letzte Woche wurde das Internet im Büro am meisten verwendet.';
-    } else if(message.includes('letzten Monat')){
+        i = 0;
+    } else if(message.includes('letzten Monat') && i===1){
         line.style.display = "none";
         question.style.display = "block";
         answer.style.display = "block";
         speech.text = 'Letzten Monat wurde das Internet im Büro am meisten verwendet.';
         answer.textContent = 'Letzten Monat wurde das Internet im Büro am meisten verwendet.';
-    } else if(message.includes('letztes Jahr')){
+        i = 0;
+    } else if(message.includes('letztes Jahr') && i===1){
         line.style.display = "none";
         question.style.display = "block";
         answer.style.display = "block";
         speech.text = 'Letztes Jahr wurde das Internet im Schlafzimmer am meisten verwendet.';
         answer.textContent = 'Letztes Jahr wurde das Internet im Schlafzimmer am meisten verwendet.';
+        i = 0;
     } 
     
 
@@ -192,58 +202,106 @@ function readOutLoud(message){
         setTimeout(function () {
             recogninition.start();
         }, 3500);
+        i = 11;
     }
 
-    if(message.includes ('ja') && answer.innerHTML.includes('Möchtest du die Geschwindigkeit bei einem bestimmten Gerät wissen?')){
+    if(message.includes ('ja') && i===11){
         line.style.display = "none";
         question.style.display = "block";
         answer.style.display = "block";
         speech.text = 'Wie heißt das Gerät?';
-        answer.textContent = 'Wie heißt das Gerät?';
+        answer.textContent = 'Wie heißt das Gerät? (Philipps MacBook, Elisas iPad oder Samsung Galaxy A10)';
         setTimeout(function () {
-            line.style.display = "inline";
-          
-            var element = document.createElement("p");
-            element.appendChild(document.createTextNode(question.innerHTML));
-            verlauf.appendChild(element);
-            var element = document.createElement("h3");
-            element.appendChild(document.createTextNode(answer.innerHTML));
-            verlauf.appendChild(element);
-            var element = document.createElement("hr");
-            verlauf.appendChild(element);
-
-            sound.play();
-
-            
-        }, 2000);
+            recogninition.start();
+        }, 2500);
+        i = 2;
     }
 
-    if(answer.innerHTML.includes('Wie heißt das Gerät?')){
+    if(message.includes ('Philips MacBook') && i === 2){
         line.style.display = "none";
+        question.style.display = "block";
         answer.style.display = "block";
-        setTimeout(function () {
-            speech.text = 'Bei diesem Gerät hat das Internet eine Uploadgeschwindigkeit von 9,8 MB/s und eine Downloadgeschwindigkeit von 20,4 MB/s.';
-            answer.textContent = 'Bei diesem Gerät hat das Internet eine Uploadgeschwindigkeit von 9,8 MB/s und eine Downloadgeschwindigkeit von 20,4 MB/s.';
-        }, 5000);
+        speech.text = 'Aktuell hat das Internet auf Philipps MacBook eine Uploadgeschwindigkeit von 9,8 MB/s und eine Downloadgeschwindigkeit von 20,4 MB/s.';
+        answer.textContent = 'Aktuell hat das Internet auf Philipps MacBook eine Uploadgeschwindigkeit von 9,8 MB/s und eine Downloadgeschwindigkeit von 20,4 MB/s.';
+        i = 0;
+    }
+    if(message.includes ('Elisas iPad') && i === 2){
+        line.style.display = "none";
+        question.style.display = "block";
+        answer.style.display = "block";
+        speech.text = 'Aktuell hat das Internet auf Elisas iPad eine Uploadgeschwindigkeit von 6,9 MB/s und eine Downloadgeschwindigkeit von 10,4 MB/s.';
+        answer.textContent = 'Aktuell hat das Internet auf Elisas iPad eine Uploadgeschwindigkeit von 9,8 MB/s und eine Downloadgeschwindigkeit von 20,4 MB/s.';
+        i = 0;
+    }
+    if(message.includes ('Samsung Galaxy A10') && i === 2){
+        line.style.display = "none";
+        question.style.display = "block";
+        answer.style.display = "block";
+        speech.text = 'Aktuell hat das Internet auf Samsung Galaxy A10 eine Uploadgeschwindigkeit von 8,7 MB/s und eine Downloadgeschwindigkeit von 14,2 MB/s.';
+        answer.textContent = 'Aktuell hat das Internet auf Samsung Galaxy A10 eine Uploadgeschwindigkeit von 9,8 MB/s und eine Downloadgeschwindigkeit von 20,4 MB/s.';
+        i = 0;
     }
 
-    if(message.includes ('nein') && answer.innerHTML.includes('Möchtest du die Geschwindigkeit bei einem bestimmten Gerät wissen?')){
+
+    if(message.includes ('nein') && i===11){
         line.style.display = "none";
         question.style.display = "block";
         answer.style.display = "block";
         speech.text = 'Aktuell hat das Internet eine Uploadgeschwindigkeit von 9,8 MB/s und eine Downloadgeschwindigkeit von 20,4 MB/s.';
         answer.textContent = 'Aktuell hat das Internet eine Uploadgeschwindigkeit von 9,8 MB/s und eine Downloadgeschwindigkeit von 20,4 MB/s.';
+        i = 0;
     }
 
+
+    //AST 5
 
     if(message.includes('Wer verwendet das Internet am meisten')){
         line.style.display = "none";
         question.style.display = "block";
         answer.style.display = "block";
-        const finalText = verwendung[Math.floor(Math.random() * verwendung.length)];
-        speech.text = finalText;
-        answer.textContent = finalText;
+        speech.text = 'Von welchem Zeitraum möchtest du das wissen? Heute, letzte Woche, letzten Monat oder letztes Jahr?';
+        answer.textContent = 'Von welchem Zeitraum möchtest du das wissen? Heute, letzte Woche, letzten Monat oder letztes Jahr?';   
+        setTimeout(function () {
+            recogninition.start();
+        }, 7000);
+        i = 11;
+
+        //ALTERNATIVE
+        //const finalText = verwendung[Math.floor(Math.random() * verwendung.length)];
+        //speech.text = finalText;
     } 
+
+    if(message.includes('heute') && i===11){
+        line.style.display = "none";
+        question.style.display = "block";
+        answer.style.display = "block";
+        speech.text = 'Heute hat Elisa das Internet am meisten verwendet.';
+        answer.textContent = 'Heute hat Elisa das Internet am meisten verwendet.';
+        i = 0;
+    } else if(message.includes('letzte woche') && i===11){
+        line.style.display = "none";
+        question.style.display = "block";
+        answer.style.display = "block";
+        speech.text = 'Letzte Woche hat Philipp das Internet am meisten verwendet.';
+        answer.textContent = 'Letzte Woche hat Philipp das Internet am meisten verwendet.';
+        i = 0;
+    } else if(message.includes('letzten Monat') && i===11){
+        line.style.display = "none";
+        question.style.display = "block";
+        answer.style.display = "block";
+        speech.text = 'Letzten Monat hat Philipp das Internet am meisten verwendet.';
+        answer.textContent = 'Letzten Monat hat Philipp das Internet am meisten verwendet.';
+        i = 0;
+    } else if(message.includes('letztes Jahr') && i===11){
+        line.style.display = "none";
+        question.style.display = "block";
+        answer.style.display = "block";
+        speech.text = 'Letztes Jahr hat Elisa das Internet am meisten verwendet.';
+        answer.textContent = 'Letztes Jahr hat Elisa das Internet am meisten verwendet.';
+        i = 0;
+    } 
+
+
 
     if(message.includes('welche Anwendung verwende ich am meisten')){
         line.style.display = "none";
@@ -253,29 +311,40 @@ function readOutLoud(message){
         answer.textContent = 'Wie heißt du?';
         setTimeout(function () {
             recogninition.start();
+            i = 10;
         }, 1500);
     } 
 
-    if(message.includes('Philipp')){
+
+    if(message.includes('Philipp') && i===10){
         line.style.display = "none";
         question.style.display = "block";
         answer.style.display = "block";
         speech.text = 'Deine meistgenutze Anwendung ist alfaview.';
         answer.textContent = 'Deine meistgenutze Anwendung ist alfaview.';
-    } else if (message.includes('Kaiser')){
+        i = 0;
+    } if(!message.includes('Philipp') && !message.includes('Kaiser') && !message.includes('Elisa') && i===10){
+        line.style.display = "none";
+        question.style.display = "block";
+        answer.style.display = "block";
+        speech.text = 'Leider ist dein Name nicht registriert. Richte bitte zuerst dein Nutzerprofil auf dem Homerouter ein.';
+        answer.textContent = 'Leider ist dein Name nicht registriert. Richte bitte zuerst dein Nutzerprofil auf dem Homerouter ein.';
+        i = 0;
+    }  else if (message.includes('Kaiser') && i===10){
         line.style.display = "none";
         question.style.display = "block";
         answer.style.display = "block";
         speech.text = 'Deine meistgenutze Anwendung ist YouTube.';
         answer.textContent = 'Deine meistgenutze Anwendung ist YouTube.';
-    } else if (message.includes('Elisa')){
+        i = 0;
+    } else if (message.includes('Elisa') && i===10){
         line.style.display = "none";
         question.style.display = "block";
         answer.style.display = "block";
         speech.text = 'Deine meistgenutze Anwendung ist Netflix.';
         answer.textContent = 'Deine meistgenutze Anwendung ist Netflix.';
+        i = 0;
     }
-   
 
 
 
@@ -287,4 +356,24 @@ function readOutLoud(message){
     speech.pitch = 1;
 
     window.speechSynthesis.speak(speech);
+}
+
+function showHints(){
+    document.getElementsByClassName('showHints')[0].style.display = "block";
+    document.getElementById('knopf').textContent = 'AUSBLENDEN';
+    document.getElementById('hint-2').style.display = "none";
+    document.getElementsByClassName('pfeil')[0].classList.add('dreh');
+    document.getElementsByClassName('button')[0].setAttribute( "onClick", "hideHints()")
+    answer.style.display = 'none';
+    question.style.display = 'none'
+}
+
+function hideHints(){
+    document.getElementsByClassName('showHints')[0].style.display = "none";
+    document.getElementById('knopf').textContent = 'ALLE ANZEIGEN';
+    document.getElementById('hint-2').style.display = "block";
+    document.getElementsByClassName('pfeil')[0].classList.remove('dreh');
+    document.getElementsByClassName('button')[0].setAttribute( "onClick", "showHints()" )
+    answer.style.display = 'block';
+    question.style.display = 'block'
 }

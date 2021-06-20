@@ -1,6 +1,7 @@
 body{
     background: #403E38;
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body, html {
@@ -92,3 +93,38 @@ video{
     padding: 20px;
     border-radius: 20px;
 }
+
+.button {
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    font-weight: bold;
+    width: 160px;
+    position: absolute;
+    bottom: 195px;
+    display: flex;
+  }
+
+  .button img{
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+  }
+
+  .showHints{
+    display: none;
+  }
+
+  .pfeil {
+      transform: rotate(0deg);
+      transition: all 0.5s ease;
+  }
+
+  .pfeil.dreh {
+    transform: rotate(180deg);
+  }
