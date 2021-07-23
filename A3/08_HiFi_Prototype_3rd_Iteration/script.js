@@ -226,6 +226,7 @@
         document.getElementsByClassName('ddElem')[0].style.display = 'block';
         document.getElementsByClassName('ndauer')[0].style.display = 'none';
         document.getElementsByClassName('signal')[0].style.display = 'block';
+        document.querySelector('.objNav').style.display = "none";
     }
 
     function nutzaus(){
@@ -233,5 +234,6 @@
         document.getElementsByClassName('ddElem')[0].style.display = 'none';
         document.getElementsByClassName('ndauer')[0].style.display = 'block';
         document.getElementsByClassName('signal')[0].style.display = 'none';
+        document.querySelector('.objNav').style.display = "flex";
     }
    
