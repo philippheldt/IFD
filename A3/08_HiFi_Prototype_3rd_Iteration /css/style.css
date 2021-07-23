@@ -1,0 +1,890 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  font-family: Montserrat;
+}
+
+h2 {
+  font: normal normal bold 23px/28px Montserrat;
+}
+
+p {
+  font-size: 12px;
+}
+
+body {
+  background-image: linear-gradient(118deg, #403E38 0%, #373732 59%, #292824 100%);
+}
+
+.container {
+  margin: 0% 10% 0% 10%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 1fr;
+      grid-template-columns: 4fr 1fr;
+}
+
+#gerate circle {
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+
+#gerate #router-2:hover {
+  -webkit-transform: matrix(1.5, 0, 0, 1.5, 440, 330);
+          transform: matrix(1.5, 0, 0, 1.5, 440, 330);
+}
+
+#gerate #echo-2:hover {
+  -webkit-transform: matrix(1.5, 0, 0, 1.5, 623, 516);
+          transform: matrix(1.5, 0, 0, 1.5, 623, 516);
+}
+
+#gerate #macBook-2:hover {
+  -webkit-transform: matrix(1.5, 0, 0, 1.5, 623, 557);
+          transform: matrix(1.5, 0, 0, 1.5, 623, 557);
+}
+
+#gerate #laptop-2:hover {
+  -webkit-transform: matrix(1.5, 0, 0, 1.5, 867, 374);
+          transform: matrix(1.5, 0, 0, 1.5, 867, 374);
+}
+
+#gerate #iPhone-2:hover {
+  -webkit-transform: matrix(1.5, 0, 0, 1.5, 448, 738);
+          transform: matrix(1.5, 0, 0, 1.5, 448, 738);
+}
+
+#gerate #samsung-2:hover {
+  -webkit-transform: matrix(1.5, 0, 0, 1.5, 763, 36);
+          transform: matrix(1.5, 0, 0, 1.5, 763, 36);
+}
+
+#gerate #fridge-2:hover {
+  -webkit-transform: matrix(1.5, 0, 0, 1.5, 618, 236);
+          transform: matrix(1.5, 0, 0, 1.5, 618, 236);
+}
+
+#gerate #iPad-2:hover {
+  -webkit-transform: matrix(1.5, 0, 0, 1.5, 435, 137);
+          transform: matrix(1.5, 0, 0, 1.5, 435, 137);
+}
+
+.seitenleiste {
+  display: -ms-grid;
+  display: grid;
+  margin: 3em 0 4em 0;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translate3d(0vw, 0, 0);
+          transform: translate3d(0vw, 0, 0);
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+.seitenleiste.show {
+  -webkit-transform: translate3d(-20vw, 0, 0);
+          transform: translate3d(-20vw, 0, 0);
+}
+
+.nutzer {
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  height: 220px;
+  width: 220px;
+  border-radius: 1000px;
+  position: relative;
+  -webkit-transition: ease 0.2s;
+  transition: ease 0.2s;
+  opacity: 100%;
+}
+
+.nutzer img {
+  position: absolute;
+  top: 75px;
+  left: 75px;
+  width: 70px;
+}
+
+.nutzer svg {
+  position: absolute;
+  top: -1.5px;
+  left: -2px;
+}
+
+.nutzer svg path {
+  cursor: pointer;
+  -webkit-transition: ease 0.1s;
+  transition: ease 0.1s;
+}
+
+.nutzer svg path:hover {
+  stroke: #F2DC66;
+  -webkit-filter: url(#upload);
+          filter: url(#upload);
+}
+
+.nutzer:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.nutzer:hover ~ .nutzer {
+  opacity: 50%;
+}
+
+.button {
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.button h2 {
+  font-size: 15px;
+  display: inline;
+}
+
+.button img {
+  margin: 0px 10px -8px 0px;
+  width: 25px;
+  display: inline;
+}
+
+#connect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: none;
+  pointer-events: none;
+}
+
+.button:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.overlay .dauer {
+  text-align: center;
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  cursor: pointer;
+}
+
+.overlay .dauer img {
+  width: 100px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.overlay .dauer img:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+  -webkit-filter: drop-shadow(100);
+          filter: drop-shadow(100);
+}
+
+.overlay .ansicht {
+  position: fixed;
+  bottom: -240px;
+  left: 60px;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -ms-grid-rows: (1fr)[8];
+      grid-template-rows: repeat(8, 1fr);
+  cursor: pointer;
+  -webkit-filter: drop-shadow(0px 0px 4px #0000002a);
+          filter: drop-shadow(0px 0px 4px #0000002a);
+}
+
+.overlay .ansicht img {
+  width: 80px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.overlay .ansicht img:hover {
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+  -webkit-filter: drop-shadow(100);
+          filter: drop-shadow(100);
+}
+
+.overlay .objNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  position: fixed;
+  bottom: 80px;
+  left: 600px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 200px;
+}
+
+.overlay .objNav img {
+  width: 15px;
+  cursor: pointer;
+}
+
+.overlay .objNav img ~ img {
+  width: 15px;
+  cursor: pointer;
+}
+
+.overlay .objNav img ~ img ~ img {
+  width: 15px;
+  cursor: pointer;
+}
+
+.overlay .slider {
+  position: fixed;
+  background: transparent linear-gradient(157deg, #E2D9C7 0%, #CCCCB4 100%) 0% 0% no-repeat padding-box;
+  width: 22%;
+  height: 90vh;
+  border-radius: 0px 20px 20px 0px;
+  top: 0px;
+  left: 0px;
+  padding: 50px;
+  -webkit-transform: translate3d(-30vw, 0, 0);
+          transform: translate3d(-30vw, 0, 0);
+  -webkit-transition: -webkit-transform ease 0.4s;
+  transition: -webkit-transform ease 0.4s;
+  transition: transform ease 0.4s;
+  transition: transform ease 0.4s, -webkit-transform ease 0.4s;
+  overflow-y: scroll;
+}
+
+.overlay .slider div {
+  margin-top: 15px;
+  padding: 20px;
+  background: linear-gradient(118deg, #403E38 0%, #373732 59%, #292824 100%);
+  border-radius: 15px;
+}
+
+.overlay .slider div h2 {
+  color: white;
+}
+
+.overlay .slider div img {
+  width: 100%;
+  padding-top: 10px;
+  display: none;
+}
+
+.overlay .slider div #arrow {
+  width: 90%;
+  padding: 20px 3px 20px 20px;
+  display: block;
+}
+
+.overlay .slider div #anwendung {
+  display: block;
+}
+
+.overlay .slider div .button {
+  width: 65px;
+  border-radius: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px 10px 5px 10px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.overlay .slider div .button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.overlay .slider .navSlider {
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.overlay .slider .navSlider h2 {
+  color: #2C2C28;
+  margin-top: 20px;
+}
+
+.overlay .slider .navSlider #arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  cursor: pointer;
+  width: 30px;
+}
+
+.overlay .slider.show {
+  -webkit-transform: translate3d(0px, 0, 0);
+          transform: translate3d(0px, 0, 0);
+}
+
+.overlay .sliderright.show {
+  -webkit-transform: translate3d(0px, 0, 0);
+          transform: translate3d(0px, 0, 0);
+}
+
+.overlay .sliderright {
+  position: fixed;
+  background: transparent linear-gradient(157deg, #E2D9C7 0%, #CCCCB4 100%) 0% 0% no-repeat padding-box;
+  width: 22%;
+  height: 90vh;
+  border-radius: 20px 0px 0px 20px;
+  top: 0px;
+  right: 0px;
+  padding: 50px;
+  -webkit-transform: translate3d(30vw, 0, 0);
+          transform: translate3d(30vw, 0, 0);
+  -webkit-transition: -webkit-transform ease 0.4s;
+  transition: -webkit-transform ease 0.4s;
+  transition: transform ease 0.4s;
+  transition: transform ease 0.4s, -webkit-transform ease 0.4s;
+  overflow-y: scroll;
+}
+
+.overlay .sliderright div {
+  margin-top: 15px;
+  padding: 20px;
+  background: linear-gradient(118deg, #403E38 0%, #373732 59%, #292824 100%);
+  border-radius: 15px;
+}
+
+.overlay .sliderright div h2 {
+  color: white;
+}
+
+.overlay .sliderright div img {
+  width: 100%;
+  padding-top: 10px;
+  display: none;
+}
+
+.overlay .sliderright div #arrowright {
+  width: 90%;
+  padding: 0px 3px 20px 20px;
+  display: block;
+}
+
+.overlay .sliderright div .button {
+  width: 65px;
+  border-radius: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px 10px 5px 10px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.overlay .sliderright div .button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.overlay .sliderright .navSlider {
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.overlay .sliderright .navSlider h2 {
+  color: #2C2C28;
+  margin-top: 20px;
+}
+
+.overlay .sliderright .navSlider #arrowright {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  cursor: pointer;
+  width: 30px;
+}
+
+model-viewer {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  display: none;
+}
+
+.signal {
+  display: none;
+}
+
+#nutzer1, #nutzer2, #nutzer3 {
+  cursor: pointer;
+}
+
+.svgElem {
+  -webkit-transform-origin: 700px 600px;
+          transform-origin: 700px 600px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform ease 1s;
+  transition: -webkit-transform ease 1s;
+  transition: transform ease 1s;
+  transition: transform ease 1s, -webkit-transform ease 1s;
+}
+
+.svgElem.mb {
+  -webkit-transform-origin: 700px 600px;
+          transform-origin: 700px 600px;
+  -webkit-transform: scale(2.8);
+          transform: scale(2.8);
+}
+
+.svgElem.ipo {
+  -webkit-transform-origin: 500px 900px;
+          transform-origin: 500px 900px;
+  -webkit-transform: scale(2.8);
+          transform: scale(2.8);
+}
+
+.svgElem.ipa {
+  -webkit-transform-origin: 500px 200px;
+          transform-origin: 500px 200px;
+  -webkit-transform: scale(2.8);
+          transform: scale(2.8);
+}
+
+.svgElem.fri {
+  -webkit-transform-origin: 700px 300px;
+          transform-origin: 700px 300px;
+  -webkit-transform: scale(2.8);
+          transform: scale(2.8);
+}
+
+.svgElem.lt {
+  -webkit-transform-origin: 900px 450px;
+          transform-origin: 900px 450px;
+  -webkit-transform: scale(2.8);
+          transform: scale(2.8);
+}
+
+.svgElem.ss {
+  -webkit-transform-origin: 850px 100px;
+          transform-origin: 850px 100px;
+  -webkit-transform: scale(2.8);
+          transform: scale(2.8);
+}
+
+.svgElem.mb2 {
+  -webkit-transform-origin: 700px 600px;
+          transform-origin: 700px 600px;
+  -webkit-transform: scale(2.8);
+          transform: scale(2.8);
+  -webkit-transition: -webkit-transform-origin ease 1s;
+  transition: -webkit-transform-origin ease 1s;
+  transition: transform-origin ease 1s;
+  transition: transform-origin ease 1s, -webkit-transform-origin ease 1s;
+}
+
+.svgElem.ipo2 {
+  -webkit-transform-origin: 500px 900px;
+          transform-origin: 500px 900px;
+  -webkit-transform: scale(2.8);
+          transform: scale(2.8);
+  -webkit-transition: -webkit-transform-origin ease 1s;
+  transition: -webkit-transform-origin ease 1s;
+  transition: transform-origin ease 1s;
+  transition: transform-origin ease 1s, -webkit-transform-origin ease 1s;
+}
+
+.svgElem.ipa2 {
+  -webkit-transform-origin: 500px 200px;
+          transform-origin: 500px 200px;
+  -webkit-transform: scale(2.8);
+          transform: scale(2.8);
+  -webkit-transition: -webkit-transform-origin ease 1s;
+  transition: -webkit-transform-origin ease 1s;
+  transition: transform-origin ease 1s;
+  transition: transform-origin ease 1s, -webkit-transform-origin ease 1s;
+}
+
+.svgElem.fri2 {
+  -webkit-transform-origin: 700px 300px;
+          transform-origin: 700px 300px;
+  -webkit-transform: scale(2.8);
+          transform: scale(2.8);
+  -webkit-transition: -webkit-transform-origin ease 1s;
+  transition: -webkit-transform-origin ease 1s;
+  transition: transform-origin ease 1s;
+  transition: transform-origin ease 1s, -webkit-transform-origin ease 1s;
+}
+
+.svgElem.lt2 {
+  -webkit-transform-origin: 900px 450px;
+          transform-origin: 900px 450px;
+  -webkit-transform: scale(2.8);
+          transform: scale(2.8);
+  -webkit-transition: -webkit-transform-origin ease 1s;
+  transition: -webkit-transform-origin ease 1s;
+  transition: transform-origin ease 1s;
+  transition: transform-origin ease 1s, -webkit-transform-origin ease 1s;
+}
+
+.svgElem.ss2 {
+  -webkit-transform-origin: 850px 100px;
+          transform-origin: 850px 100px;
+  -webkit-transform: scale(2.8);
+          transform: scale(2.8);
+  -webkit-transition: -webkit-transform-origin ease 1s;
+  transition: -webkit-transform-origin ease 1s;
+  transition: transform-origin ease 1s;
+  transition: transform-origin ease 1s, -webkit-transform-origin ease 1s;
+}
+
+@media only screen and (max-width: 1800px) {
+  .svgElem {
+    -webkit-transition: -webkit-transform ease 1s;
+    transition: -webkit-transform ease 1s;
+    transition: transform ease 1s;
+    transition: transform ease 1s, -webkit-transform ease 1s;
+    height: 100vh;
+  }
+  body {
+    background: #403E38;
+  }
+  .seitenleiste {
+    margin-right: 75%;
+  }
+  .nutzer {
+    height: 170px;
+    width: 170px;
+  }
+  .nutzer img {
+    width: 58px;
+    top: 58px;
+    left: 58px;
+  }
+  .nutzer svg {
+    width: 180px;
+    top: -25px;
+    left: -1.5px;
+  }
+  .container {
+    margin: 0px;
+  }
+  .svgElem.mb {
+    -webkit-transform-origin: 700px 450px;
+            transform-origin: 700px 450px;
+    -webkit-transform: scale(2.8);
+            transform: scale(2.8);
+  }
+  .svgElem.ipo {
+    -webkit-transform-origin: 500px 600px;
+            transform-origin: 500px 600px;
+    -webkit-transform: scale(2.8);
+            transform: scale(2.8);
+  }
+  .svgElem.ipa {
+    -webkit-transform-origin: 500px 50px;
+            transform-origin: 500px 50px;
+    -webkit-transform: scale(2.8);
+            transform: scale(2.8);
+  }
+  .svgElem.fri {
+    -webkit-transform-origin: 700px 150px;
+            transform-origin: 700px 150px;
+    -webkit-transform: scale(2.8);
+            transform: scale(2.8);
+  }
+  .svgElem.lt {
+    -webkit-transform-origin: 900px 300px;
+            transform-origin: 900px 300px;
+    -webkit-transform: scale(2.8);
+            transform: scale(2.8);
+  }
+  .svgElem.ss {
+    -webkit-transform-origin: 750px 0px;
+            transform-origin: 750px 0px;
+    -webkit-transform: scale(2.8);
+            transform: scale(2.8);
+  }
+  .svgElem.mb2 {
+    -webkit-transform-origin: 700px 450px;
+            transform-origin: 700px 450px;
+    -webkit-transform: scale(2.8);
+            transform: scale(2.8);
+    -webkit-transition: -webkit-transform-origin ease 1s;
+    transition: -webkit-transform-origin ease 1s;
+    transition: transform-origin ease 1s;
+    transition: transform-origin ease 1s, -webkit-transform-origin ease 1s;
+  }
+  .svgElem.ipo2 {
+    -webkit-transform-origin: 500px 600px;
+            transform-origin: 500px 600px;
+    -webkit-transform: scale(2.8);
+            transform: scale(2.8);
+    -webkit-transition: -webkit-transform-origin ease 1s;
+    transition: -webkit-transform-origin ease 1s;
+    transition: transform-origin ease 1s;
+    transition: transform-origin ease 1s, -webkit-transform-origin ease 1s;
+  }
+  .svgElem.ipa2 {
+    -webkit-transform-origin: 500px 50px;
+            transform-origin: 500px 50px;
+    -webkit-transform: scale(2.8);
+            transform: scale(2.8);
+    -webkit-transition: -webkit-transform-origin ease 1s;
+    transition: -webkit-transform-origin ease 1s;
+    transition: transform-origin ease 1s;
+    transition: transform-origin ease 1s, -webkit-transform-origin ease 1s;
+  }
+  .svgElem.fri2 {
+    -webkit-transform-origin: 700px 150px;
+            transform-origin: 700px 150px;
+    -webkit-transform: scale(2.8);
+            transform: scale(2.8);
+    -webkit-transition: -webkit-transform-origin ease 1s;
+    transition: -webkit-transform-origin ease 1s;
+    transition: transform-origin ease 1s;
+    transition: transform-origin ease 1s, -webkit-transform-origin ease 1s;
+  }
+  .svgElem.lt2 {
+    -webkit-transform-origin: 900px 300px;
+            transform-origin: 900px 300px;
+    -webkit-transform: scale(2.8);
+            transform: scale(2.8);
+    -webkit-transition: -webkit-transform-origin ease 1s;
+    transition: -webkit-transform-origin ease 1s;
+    transition: transform-origin ease 1s;
+    transition: transform-origin ease 1s, -webkit-transform-origin ease 1s;
+  }
+  .svgElem.ss2 {
+    -webkit-transform-origin: 750px 0px;
+            transform-origin: 750px 0px;
+    -webkit-transform: scale(2.8);
+            transform: scale(2.8);
+    -webkit-transition: -webkit-transform-origin ease 1s;
+    transition: -webkit-transform-origin ease 1s;
+    transition: transform-origin ease 1s;
+    transition: transform-origin ease 1s, -webkit-transform-origin ease 1s;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .data svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.legende {
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 20px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  padding: 15px;
+}
+
+#tooltip {
+  font-weight: bold;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+#tooltipMore {
+  font-weight: 10;
+}
+
+.button-slider {
+  position: fixed;
+  bottom: 80px;
+  left: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 360px;
+}
+
+.button-slider h2 {
+  font-size: 15px;
+  display: inline;
+}
+
+.button-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.button-active h2 {
+  font-size: 15px;
+  display: inline;
+}
+
+.button-inactive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0);
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.button-inactive h2 {
+  font-size: 15px;
+  display: inline;
+}
+
+#legendeN {
+  display: none;
+}
+
+.list-frame {
+  padding: 0 10% 0 10%;
+  width: 80vw;
+  height: 490px;
+  display: none;
+}
+
+.list-grid {
+  margin: 10% 0 0 0;
+  padding: 1%;
+  width: 80%;
+  height: 100%;
+  background-color: #373732;
+  border-radius: 20px;
+}
+
+.list-grid > * {
+  padding: 10px 10px 10px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.list-item:nth-child(odd) {
+  background-color: #292824;
+}
+
+.list-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr 5fr 3fr;
+      grid-template-columns: 1fr 5fr 5fr 3fr;
+}
+
+.list-item > * {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.list-grid > *:hover {
+  background-color: #1d1c19;
+}
+
+.onboarding {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  border-radius: 20px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+video {
+  width: 300px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.window {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  padding: 35px;
+  border-radius: 20px;
+  width: 60vw;
+  height: 50vh;
+  background-color: #E4DDD1;
+  -webkit-filter: drop-shadow(0px 0px 10px #00000075);
+          filter: drop-shadow(0px 0px 10px #00000075);
+  position: relative;
+}
+
+.window .arrow {
+  width: 40px;
+  position: absolute;
+  right: 40px;
+  bottom: 45%;
+  cursor: pointer;
+}
+
+.window .arrowLeft {
+  width: 40px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.text {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 50px;
+  margin-right: 70px;
+}
+
+.text h1 {
+  color: #1d1c19;
+  font-size: 35px;
+  line-height: 1.5;
+}
+
+.text h2 {
+  color: #1d1c19;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.text p {
+  color: #1d1c19;
+  font-size: 20px;
+  line-height: 1.5;
+}
+/*# sourceMappingURL=style.css.map */
