@@ -123,9 +123,6 @@ body{
     background: rgba($color: #000000, $alpha: 0.2);
 }
 
-.nutzer:hover ~ .nutzer{
-    opacity: 50%;
-}
 
 
 .button{
@@ -729,6 +726,14 @@ video{
         width: 40px;
         margin-right: 20px;
         cursor: pointer;
+    }
+
+    .x{
+        width: 30px;
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        cursor: pointer; 
     }
 }
 
